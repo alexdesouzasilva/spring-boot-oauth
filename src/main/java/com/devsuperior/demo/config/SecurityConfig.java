@@ -10,7 +10,11 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class SecurityConfig {
 
-
+    /**  Registrando Componentes.
+         Usamos o Configuration e o Bean quando queremos registrar uma classe na qual 
+        não temos acesso de alteração, até porque já foram compiladas.
+    */
+    
     @Bean
     public PasswordEncoder getPasswordEncoder() {
         return new BCryptPasswordEncoder();
